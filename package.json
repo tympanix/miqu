@@ -1,0 +1,19 @@
+{
+  "name": "miqu",
+  "version": "0.1.0",
+  "description": "Simply a css framework, move along",
+  "main": "styles.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tympanix/miqu.git"
+  },
+  "author": "tympanix <tympanix@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tympanix/miqu/issues"
+  },
+  "homepage": "https://github.com/tympanix/miqu#readme"
+}

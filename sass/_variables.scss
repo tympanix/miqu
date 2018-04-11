@@ -1,0 +1,68 @@
+// Font settings
+$font: 'Work Sans', sans-serif;
+
+// Colors
+$brand: #3498db;
+$borderColor: rgba(0,0,0,0.05);
+$formColor: rgba(0,0,0,.2);
+
+// Shadows
+$formShadow: 0 2px 4px $formColor;
+
+// Animations
+$bazier: cubic-bezier(0, 2.07, 0.42, 1.73);
+
+// Screen sizes
+$mobile: 650px;
+$tablet: 1150px;
+$desktop: 2560px;
+
+// Colors
+$green: rgb(152, 195, 121);
+$blue: rgb(101, 176, 237);
+$red: rgb(225, 108, 117);
+$yellow: rgb(229, 192, 123);
+$purple: rgb(198, 120, 221);
+$cyan: rgb(86, 182, 194);
+
+/*
+ * Mixin media queries are used to target screen sizes (not browser/portal size).
+ * Can be used to target mobile, tablet and desktop devices regardless of how
+ * large the portal may be.
+ */
+@mixin mobile {
+  @media only screen and (max-device-width: $mobile) { @content; }
+}
+
+@mixin tablet {
+  @media only screen and (max-device-width: $tablet) { @content; }
+}
+
+@mixin desktop {
+  @media only screen and (max-device-width: $desktop) { @content; }
+}
+
+@mixin highres {
+  @media only screen and (min-device-width: $desktop) { @content; }
+}
+
+/*
+ * Mixin media queries used to target browser/portal sizes (e.g. when rezising
+ * the browser window). Can be used to target small, medium, large... ect. browser
+ * sizes to create responsive design
+ */
+@mixin small {
+  @media only screen and (max-width: $mobile) { @content; }
+}
+
+@mixin medium {
+  @media only screen and (max-width: $tablet) { @content; }
+}
+
+@mixin large {
+  @media only screen and (max-width: $desktop) { @content; }
+}
+
+@mixin extralarge {
+  @media only screen and (min-width: $desktop) { @content; }
+}

@@ -1,0 +1,55 @@
+$toggleSize: 1.667em;
+$toggleWidth: $toggleSize * 1.6667;
+$toggleMove: $toggleWidth - $toggleSize;
+$toggleMargin: (3em - $toggleSize)/2;
+
+.toggle {
+  display: none;
+  max-height: 0;
+  max-width: 0;
+  opacity: 0;
+}
+
+.toggle + label {
+  @extend .noselect;
+  position: absolute;
+  margin-top: (1em-$toggleSize)/2;
+  cursor: pointer;
+  display: inline-block;
+  box-shadow: inset 0 0 0px 1px #d5d5d5;
+  text-indent: -5000px;
+  height: $toggleSize; width: $toggleWidth;
+  border-radius: 9999em;
+}
+
+.toggle + label:before {
+  content: '';
+  position: relative;
+  display: block;
+  height: $toggleSize; width: $toggleSize;
+  top: 0; left: 0;
+  border-radius: 9999em;
+  transition: .125s ease-in-out;
+}
+
+.toggle + label:after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: $toggleSize; width: $toggleSize;
+  top: 0; left: 0;
+  border-radius: 9999em;
+  background: white;
+  box-shadow: inset 0 0 0 1px $formColor, $formShadow;
+  transition: .125s ease-in-out;
+}
+
+.toggle:checked + label:before {
+  width: $toggleWidth;
+  background: $brand;
+}
+
+.toggle:checked + label:after {
+  left: $toggleMove;
+  box-shadow: inset 0 0 0 1px $brand, 0 2px 4px $formColor;
+}

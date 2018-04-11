@@ -1,0 +1,54 @@
+.flex {
+  display: flex;
+  flex-flow: row;
+
+  @include medium {
+    &.collapse {
+      flex-flow: column;
+
+      .col {
+        flex: 1 1 auto;
+      }
+
+      .right {
+        margin-left: 0;
+      }
+
+      > * {
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  &.form {
+    margin-bottom: 1em;
+    
+    input {
+      margin: 0;
+    }
+  }
+
+  &.center {
+    text-align: left;
+  }
+
+  &.vcenter {
+    justify-content: center;
+  }
+
+  .col {
+    overflow: hidden;
+    flex: 1 1 100%;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+
+  @for $i from 1 through 12 {
+    .size-#{$i} {
+      flex-shrink: $i;
+      flex-grow: $i;
+    }
+  }
+}

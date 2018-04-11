@@ -1,0 +1,60 @@
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  box-shadow: 0 0 1.5em .25em rgba(0,0,0,0.125);
+  border-top: .2em solid $brand;
+  transform: translateY(1em);
+  max-width: 100vw;
+  background: white;
+  overflow: auto;
+  outline: none;
+  padding: 1em;
+  transition: opacity, transform .125s ease-out;
+  transform-origin: center;
+  opacity: 0;
+  margin: auto;
+  overflow: hidden;
+
+  &.small {
+    width: 24em;
+  }
+
+  &.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &.close {
+    opacity: 0;
+  }
+
+  header {
+    font-weight: 800;
+    font-size: 1.25em;
+    padding: .5em;
+    margin-bottom: .5em;
+  }
+
+  main {
+    padding: 0 .5em;
+  }
+
+  footer {
+    background-color: $borderColor;
+    border-top: 1px solid $borderColor;
+    margin: -1em;
+    padding: .75em;
+    text-align: center;
+    margin-top: 1em;
+  }
+}

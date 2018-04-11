@@ -1,0 +1,66 @@
+.green { color: $green; }
+.red { color: $red; }
+.yellow { color: $yellow; }
+.purple { color: $purple; }
+.cyan { color: $cyan; }
+
+.stretch {
+  width: 100%;
+}
+
+.meta {
+  color: grey;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.noselect {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inline > * {
+  display: inline-block;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.spaced > * {
+  &:not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.wrap {
+  white-space: normal;
+}
+
+.vspace > * {
+  margin-bottom: 0.5em;
+}
+
+.pad {
+  margin: 0 .5em;
+}

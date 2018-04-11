@@ -1,0 +1,43 @@
+span.tags {
+  margin: 0;
+  white-space: nowrap;
+
+  >:not(:last-child) {
+    margin-right: 0.5em;
+  }
+}
+
+.right {
+  float: right;
+}
+
+span.tag {
+  position: relative;
+  white-space: nowrap;
+  background-color: $borderColor;
+  padding: .25em .75em;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 800;
+
+  span {
+    margin-left: .5em;
+  }
+}
+
+button.context {
+  position: fixed;
+  color: white;
+  background-color: $brand;
+  box-shadow: $formShadow;
+  width: 3.5em;
+  height: 3.5em;
+  bottom: 1em;
+  right: 1em;
+
+  @include desktop {
+    bottom: 2em;
+    right: 2em;
+  }
+}
